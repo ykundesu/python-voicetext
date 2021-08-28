@@ -9,7 +9,6 @@ import os.path
 
 import requests
 from requests.auth import HTTPBasicAuth
-import pyaudio
 
 
 class VoiceTextException(Exception):
@@ -22,7 +21,6 @@ class VoiceText(object):
     """
     URL = 'https://api.voicetext.jp/v1/tts'
     CHUNK = 1024
-    _audio = pyaudio.PyAudio()
 
     def __init__(self, user_name='', password='', speaker='hikari'):
         """
